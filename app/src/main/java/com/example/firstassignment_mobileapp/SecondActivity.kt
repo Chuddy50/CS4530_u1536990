@@ -9,11 +9,13 @@ class SecondActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // load second screen
         setContentView(R.layout.activity_secondary)  // make sure the name matches!
 
         val tvMessage: TextView = findViewById(R.id.tvMessage)
         val btnBack: Button = findViewById(R.id.btnBack)
 
+        // get message text
         val message = intent.getStringExtra(MainActivity.EXTRA_BUTTON_TEXT) ?: "No message"
         tvMessage.text = message
 
@@ -22,6 +24,7 @@ class SecondActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
+    // back button information
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true

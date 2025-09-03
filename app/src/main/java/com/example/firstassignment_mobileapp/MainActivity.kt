@@ -8,13 +8,16 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     companion object {
+        //const key
         const val EXTRA_BUTTON_TEXT = "com.example.a1buttons.EXTRA_BUTTON_TEXT"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // load intial screen
         setContentView(R.layout.activity_main)
 
+        // find inital button ids
         val buttons: List<Button> = listOf(
             findViewById(R.id.btnOne),
             findViewById(R.id.btnTwo),
@@ -23,6 +26,7 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.btnFive)
         )
 
+        // if buttons clicked
         val onAnyButtonClicked: (Button) -> Unit = { btn ->
             val label = btn.text.toString()
             val intent = Intent(this, SecondActivity::class.java).apply {
