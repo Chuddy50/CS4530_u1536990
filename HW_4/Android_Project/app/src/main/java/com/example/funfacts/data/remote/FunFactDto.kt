@@ -1,4 +1,4 @@
-package com.example.funfacts.network
+package com.example.funfacts.data.remote
 
 import kotlinx.serialization.Serializable
 

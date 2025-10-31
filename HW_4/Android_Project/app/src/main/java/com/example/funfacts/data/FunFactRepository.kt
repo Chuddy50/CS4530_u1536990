@@ -1,6 +1,7 @@
 package com.example.funfacts.data
 
-import com.example.funfacts.network.FunFactDto
+import com.example.funfacts.data.local.FunFactDao
+import com.example.funfacts.data.remote.FunFactDto
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
