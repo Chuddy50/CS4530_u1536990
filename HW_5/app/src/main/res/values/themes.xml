@@ -1,0 +1,8 @@
+<resources>
+    <!-- App theme -->
+    <style name="Theme.Marble_Hw" parent="Theme.Material3.DayNight">
+        <!-- Hide the action bar (Compose doesn't need it) -->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>
